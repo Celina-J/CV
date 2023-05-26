@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;800&family=Poppins&display=swap');
+
+:root {
+  --white: #ffffff;
+  --dark-grey: #343536;
+  --light-blue: #5DE0E6;
+  --dark-blue: #004AAD;
+  --dark-teal: #0097B2;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #eee;
+}
+
+a{
+  color: var(--white);
+  text-decoration: none;
+}
+
+.container {
+  margin: auto;
+  max-width: 1440px;
+  background-color: var(--white);
+
+}
+
+.container-inner {
+  display: grid;
+  grid-template-columns: 1fr 3.5fr;
+}
+
+@media screen and (max-width: 1000px) {
+  .container-inner {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content";
+  }
+
+}
+
+.title {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 800;
+}
+
+.flx-space-btw {
+  display: flex;
+  justify-content: space-between;
+}
+
+.font-1p2 {
+  font-size: 1.2em;
+}
+
+.font-1p5 {
+  font-size: 1.5em;
+}
+
+.font-2 {
+  font-size: 2em;
+}
+
+.font-2p5 {
+  font-size: 2.5em;
+}
+
+.font-3 {
+  font-size: 3em;
+}
+
+.font-5 {
+  font-size: 5em;
+}
+
+/* margin, value in em, vertical */
+.m1v {
+  margin: 1em 0;
+}
+
+.m2v {
+  margin: 2em 0;
+}
+
+.m3v {
+  margin: 3em 0;
+}
+
+.fade-in {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
